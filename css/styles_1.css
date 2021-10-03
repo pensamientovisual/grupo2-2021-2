@@ -1,0 +1,85 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: white;
+    float: left;
+    width: 20%;
+    height: 800px;
+}
+
+article {
+    float: left;
+    width: 80%;
+}
+
+.grafico {
+    background-color: tomato;
+    float: left;
+    width: 50vw;
+    height: 80vh;
+    opacity: 0;
+    animation-name: ani_grafico;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+.mapa {
+    right: 45vw;
+    max-height: 90vh;
+    max-width: 10vw;
+    animation-name: ani_mapa;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.linea_tiempo {
+    float: left;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: yellow;
+}
+
+@keyframes ani_mapa {
+    0% {right: 45vw;}
+    100%{right: 10vw;}
+}
+
+@keyframes ani_grafico {
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+path {
+    fill: red;
+    stroke: black;
+}
+
+path:hover {
+    fill: lime;
+    stroke: black;
+}
+
+svg {
+    background-color: darkgrey;
+}
