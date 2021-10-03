@@ -1,0 +1,74 @@
+
+
+nav {
+    background-color: white;
+    float: left;
+    width: 20%;
+    height: 800px;
+}
+
+article {
+    width: 80%;
+}
+
+.mapa {
+    max-height: 90vh;
+    max-width: 20vw;
+}
+
+.mapa path {
+    fill: red;
+    stroke: black;
+}
+
+.mapa path:hover {
+    fill: lime;
+    stroke: black;
+}
+
+.grafico {
+    background-color: tomato;
+    right: 10vw;
+    width: 25vw;
+    height: 60vh;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+
+    .center {
+        left: 15vw;
+    }
+
+    .mapa {
+        max-height: 70vh;
+        max-width: 20vw;
+    }
+
+    .grafico {
+        background-color: tomato;
+        right: 10vw;
+        width: 60vw;
+        height: 40vh;
+    }
+  }
