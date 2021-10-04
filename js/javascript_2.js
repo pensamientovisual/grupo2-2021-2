@@ -41,12 +41,14 @@ window.onload = function () {
           mapa_svg.classList.remove('animar-mapa');
         }, 2000);*/
   }
+  var name = "data/graficos/Índiceprecipitaciónanual_2021_"
   regiones.forEach(item => {
     item.onclick = function (event) {
       console.log(item.getAttribute('title'))
       limpiar_regiones(regiones)
       item.style.fill = "green";
-      alert(item.getAttribute('title'))
+      grafico1.children[0].innerHTML = item.getAttribute('title')
+      grafico1.children[1].setAttribute('src', name+item.getAttribute('title')+'.png')
     }
   });
 
