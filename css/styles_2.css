@@ -1,14 +1,14 @@
-
-
 nav {
     background-color: white;
     float: left;
     width: 20%;
     height: 800px;
+    margin: 50px;
 }
 
 article {
     width: 80%;
+    float: left;
 }
 
 .mapa {
@@ -26,11 +26,20 @@ article {
     stroke: black;
 }
 
-.grafico {
+.grafico1 {
     background-color: tomato;
-    right: 10vw;
-    width: 25vw;
+    width: 50vw;
     height: 60vh;
+    visibility: collapse;
+    opacity: 0;
+}
+
+.grafico2 {
+    background-color: tomato;
+    width: 35vw;
+    height: 80vh;
+    right: 5%;
+    opacity: 1;
 }
 
 .vertical-center {
@@ -50,14 +59,137 @@ article {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 600px) {
+.animar-mapa {
+    animation-name: ani-mapa;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.animar-mapa-vuelta {
+    animation-name: ani-mapa-vuelta;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.animar-grafico1 {
+    animation-name: ani-grafico1;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.animar-grafico1-vuelta {
+    animation-name: ani-grafico1-vuelta;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.animar-grafico2 {
+    animation-name: ani-grafico2;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.animar-grafico2-vuelta {
+    animation-name: ani-grafico2-vuelta;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ani-mapa {
+    0% {
+        left: 50%;
+    }
+    100%{
+        left: 90%;
+    }
+}
+
+@keyframes ani-mapa-vuelta {
+    0% {
+        left: 90%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+
+@keyframes ani-grafico1 {
+    50% {
+        left: 50%;
+        opacity: 0;
+        visibility: visible;
+    }
+    100%{
+        left: 55%;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes ani-grafico1-vuelta {
+    0% {
+        left: 55%;
+        opacity: 1;
+        visibility: visible;
+    }
+    20%{
+        left: 50%;
+        opacity: 0;
+        visibility: collapse;
+    }
+}
+
+@keyframes ani-grafico2 {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    10%{
+        opacity: 0;
+        visibility: collapse;
+    }
+    100% {
+        opacity: 0;
+        visibility: collapse;
+    }
+}
+
+@keyframes ani-grafico2-vuelta {
+    0% {
+        opacity: 0;
+        visibility: collapse;
+    }
+    70% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        
+    }
+}
+
+@media (max-width: 800px) {
     nav, article {
       width: 100%;
       height: auto;
     }
 
     .center {
-        left: 15vw;
+        transform: translate(-85%, -50%);        
     }
 
     .mapa {
@@ -65,10 +197,13 @@ article {
         max-width: 20vw;
     }
 
-    .grafico {
+    .grafico1 {
         background-color: tomato;
-        right: 10vw;
         width: 60vw;
         height: 40vh;
+    }
+
+    #grafico1 {
+        left: 10%;
     }
   }
