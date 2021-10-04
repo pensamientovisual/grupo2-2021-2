@@ -6,7 +6,6 @@ function limpiar_regiones(regiones) {
   })
 }
 
-
 window.onload = function () {
 
   var regiones = document.getElementById('mapa').childNodes;
@@ -47,6 +46,7 @@ window.onload = function () {
       console.log(item.getAttribute('title'))
       limpiar_regiones(regiones)
       item.style.fill = "green";
+      alert(item.getAttribute('title'))
     }
   });
 
