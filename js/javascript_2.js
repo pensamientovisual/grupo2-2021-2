@@ -1,3 +1,12 @@
+function limpiar_regiones(regiones) {
+  regiones.forEach(i => {
+    if (i.nodeName == 'path') {
+      i.style.fill = ""
+    }
+  })
+}
+
+
 window.onload = function () {
 
   var regiones = document.getElementById('mapa').childNodes;
@@ -6,6 +15,7 @@ window.onload = function () {
   var grafico1 = document.getElementById('grafico1');
   var grafico2 = document.getElementById('grafico2');
   btn.onclick = function (event) {
+    limpiar_regiones(regiones)
     if (mapa_svg.classList.contains('animar-mapa')) {
       mapa_svg.classList.remove('animar-mapa');
       grafico1.classList.remove('animar-grafico1');
@@ -35,11 +45,7 @@ window.onload = function () {
   regiones.forEach(item => {
     item.onclick = function (event) {
       console.log(item.getAttribute('title'))
-      regiones.forEach(i => {
-        if (i.nodeName == 'path') {
-          i.style.fill = ""
-        }
-      })
+      limpiar_regiones(regiones)
       item.style.fill = "green";
     }
   });
