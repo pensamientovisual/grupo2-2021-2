@@ -1,13 +1,32 @@
-nav {
-    background-color: white;
-    float: left;
-    width: 20%;
-    height: 800px;
-    margin: 50px;
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-size: cover;
+    color: whitesmoke;
+}
+.container {
+    
+    padding: 0;
+    margin: 0;
+}
+.info {
+    padding: 10px;
+    width: 25vw;
 }
 
-article {
-    width: 80%;
+.box {
+    margin: 10px;
+}
+
+.box-map {
+    width: 90%;
     float: left;
 }
 
@@ -27,21 +46,38 @@ article {
 }
 
 .grafico1 {
-    background-color: tomato;
+    background-color: rgba(0,0,0, 0.3);
     width: 50vw;
     height: 60vh;
     visibility: collapse;
     opacity: 0;
+    border-radius: 10px;
+    
 }
 
+.grafico1 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
 .grafico2 {
-    background-color: tomato;
+    background-color: rgba(0,0,0, 0.3);
     width: 35vw;
     height: 80vh;
     right: 5%;
     opacity: 1;
+    border-radius: 10px;
 }
 
+.title {
+    padding: 10px;
+    text-align: center;
+}
+.grafico2 li {
+    font-size: 22px;
+    padding-top: 25px;
+}
 .vertical-center {
     margin: 0;
     position: absolute;
@@ -183,7 +219,7 @@ article {
 }
 
 @media (max-width: 800px) {
-    nav, article {
+    .info, .box-map {
       width: 100%;
       height: auto;
     }
@@ -206,4 +242,4 @@ article {
     #grafico1 {
         left: 10%;
     }
-  }
+  } 
