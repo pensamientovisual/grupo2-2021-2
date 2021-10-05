@@ -221,6 +221,7 @@ body {
     }
 }
 
+/*
 @media (max-width: 800px) {
     .info, .box-map {
       width: 100%;
@@ -245,4 +246,4 @@ body {
     #grafico1 {
         left: 10%;
     }
-  } 
+  } */
