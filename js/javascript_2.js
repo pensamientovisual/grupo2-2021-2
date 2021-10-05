@@ -50,9 +50,10 @@ window.onload = function () {
       item.style.fill = "green";
       grafico1.children[0].innerHTML = item.getAttribute('title')
       grafico1.children[1].setAttribute('src', name1+item.getAttribute('title')+'.png')
+      /*
       grafico2.children[0].innerHTML = "SEQUÍA ESTANDARIZADA " + item.getAttribute('title')
       grafico2.children[1].setAttribute('src', name2+item.getAttribute('title')+'.png')
-      
+      */
     }
   });
 

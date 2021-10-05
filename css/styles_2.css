@@ -57,9 +57,11 @@ body {
 
 .grafico1 img{
     display: block;
+    margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    max-width: 75%;
+    max-height: 65%;
 }
 .grafico2 {
     background-color: rgba(0,0,0, 0.3);
@@ -73,6 +75,7 @@ body {
 .title {
     padding: 10px;
     text-align: center;
+    max-height: 20%;
 }
 .grafico2 li {
     font-size: 22px;
