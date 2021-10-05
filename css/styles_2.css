@@ -1,3 +1,18 @@
+h1 {
+    font-family:Arial;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family:Arial;
+    font-size: 2rem;
+}
+
+p {
+    font-family: Georgia;
+    font-size: 1.5rem;
+}
+
 nav {
     background-color: white;
     float: left;
@@ -27,19 +42,27 @@ article {
 }
 
 .grafico1 {
-    background-color: tomato;
+    background-color: transparent;
     width: 50vw;
-    height: 60vh;
+    height: fit-content;
     visibility: collapse;
     opacity: 0;
+    text-align: center;
 }
 
 .grafico2 {
-    background-color: tomato;
+    background-color: transparent;
     width: 35vw;
-    height: 80vh;
+    height: fit-content;
     right: 5%;
     opacity: 1;
+    text-align: center;
+}
+
+.imagen {
+    padding: 0 5% 5% 5%;
+    width: 90%;
+    object-fit: contain"
 }
 
 .vertical-center {
@@ -181,7 +204,7 @@ article {
         
     }
 }
-
+/*
 @media (max-width: 800px) {
     nav, article {
       width: 100%;
@@ -206,4 +229,4 @@ article {
     #grafico1 {
         left: 10%;
     }
-  }
+  }*/
