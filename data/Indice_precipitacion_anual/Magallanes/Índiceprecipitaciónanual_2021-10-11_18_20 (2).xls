@@ -1,0 +1,227 @@
+<div class="table-responsive mt-4" id="excel">
+                    <table class="table table-bordered">
+                        <tbody><tr class="text-left bg-rotulo-tabla">
+                            <td colspan="3">
+                                <h4> <strong>Indice Climatico y Tendencia </strong></h4><h4> 
+                                </h4><h4> Indice precipitacion anual </h4><h4> 
+                                </h4><h5> Indice de precipitacion anual que corresponde a la suma de la precipitacion sobre 1 milimetro. </h5>
+                            </td>
+                        </tr>
+                        <tr class="text-center bg-rotulo-tabla">
+                            <td> Ano </td>
+                            <td> Valor     (mm) </td>
+                            <td> Anomalia  (mm)</td>
+                        </tr>
+                                                <tr class="text-center">
+                            <td> 1981 </td>
+                            <td> 784.3 </td>
+                            <td> 284.4 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1982 </td>
+                            <td> 689.9 </td>
+                            <td> 190.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1983 </td>
+                            <td> 494.5 </td>
+                            <td> -5.4 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1984 </td>
+                            <td> 582.4 </td>
+                            <td> 82.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1985 </td>
+                            <td> 311.9 </td>
+                            <td> -188.0 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1986 </td>
+                            <td> 311.6 </td>
+                            <td> -188.3 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1987 </td>
+                            <td> 340.7 </td>
+                            <td> -159.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1988 </td>
+                            <td> 575.9 </td>
+                            <td> 76.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1989 </td>
+                            <td> 412.1 </td>
+                            <td> -87.8 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1990 </td>
+                            <td> 495.2 </td>
+                            <td> -4.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1991 </td>
+                            <td> 472.1 </td>
+                            <td> -27.8 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1992 </td>
+                            <td> 548.9 </td>
+                            <td> 49.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1993 </td>
+                            <td> 431.3 </td>
+                            <td> -68.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1994 </td>
+                            <td> 474.3 </td>
+                            <td> -25.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1995 </td>
+                            <td> 542.9 </td>
+                            <td> 43.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1996 </td>
+                            <td> 562.2 </td>
+                            <td> 62.4 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1997 </td>
+                            <td> 564.1 </td>
+                            <td> 64.2 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1998 </td>
+                            <td> 441.3 </td>
+                            <td> -58.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 1999 </td>
+                            <td> 417.0 </td>
+                            <td> -82.9 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2000 </td>
+                            <td> 522.5 </td>
+                            <td> 22.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2001 </td>
+                            <td> 335.6 </td>
+                            <td> -164.3 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2002 </td>
+                            <td> 465.1 </td>
+                            <td> -34.8 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2003 </td>
+                            <td> 313.5 </td>
+                            <td> -186.4 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2004 </td>
+                            <td> 235.4 </td>
+                            <td> -264.5 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2005 </td>
+                            <td> 380.2 </td>
+                            <td> -119.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2006 </td>
+                            <td> 213.6 </td>
+                            <td> -286.3 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2007 </td>
+                            <td> 410.6 </td>
+                            <td> -89.3 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2008 </td>
+                            <td> 301.8 </td>
+                            <td> -198.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2009 </td>
+                            <td> 431.3 </td>
+                            <td> -68.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2010 </td>
+                            <td> 317.4 </td>
+                            <td> -182.5 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2011 </td>
+                            <td> 386.5 </td>
+                            <td> -113.4 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2012 </td>
+                            <td> 419.0 </td>
+                            <td> -80.9 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2013 </td>
+                            <td> 523.5 </td>
+                            <td> 23.6 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2014 </td>
+                            <td> 550.7 </td>
+                            <td> 50.9 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2015 </td>
+                            <td> 903.0 </td>
+                            <td> 403.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2016 </td>
+                            <td> 487.6 </td>
+                            <td> -12.3 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2017 </td>
+                            <td> 539.8 </td>
+                            <td> 39.9 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2018 </td>
+                            <td> 531.6 </td>
+                            <td> 31.7 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2019 </td>
+                            <td> 735.9 </td>
+                            <td> 236.1 </td>                
+                        </tr>    
+                                                <tr class="text-center">
+                            <td> 2020 </td>
+                            <td> 556.0 </td>
+                            <td> 56.1 </td>                
+                        </tr>    
+                        
+                        <tr class="bg-rotulo-tabla">
+                            <td colspan="2">
+                                <h3> Tendencia Lineal por Decada </h3>
+                            </td>
+                            <td class="text-center">
+                                <h3>
+                                    1.5                                    <span> <small>  (mm / Decada)  </small></span>
+                                </h3>
+                            </td>
+                        </tr>
+                    </tbody></table>                
+                </div>

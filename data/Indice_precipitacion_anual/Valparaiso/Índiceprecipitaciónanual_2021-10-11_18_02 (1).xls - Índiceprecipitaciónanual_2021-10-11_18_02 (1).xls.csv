@@ -1,3 +1,8 @@
+"Indice Climatico y Tendencia 
+ 
+ Indice precipitacion anual 
+ 
+ Indice de precipitacion anual que corresponde a la suma de la precipitacion sobre 1 milimetro.",,
 Ano,Valor (mm),Anomalia (mm)
 1981,535.5,-110.8
 1982,1161.9,515.6
@@ -39,3 +44,4 @@ Ano,Valor (mm),Anomalia (mm)
 2018,250.1,-396.2
 2019,106.0,-540.3
 2020,387.1,-259.2
+Tendencia Lineal por Decada,,-103.8   (mm / Decada)
