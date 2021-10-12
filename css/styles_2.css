@@ -1,32 +1,37 @@
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-    background-size: cover;
-    color: whitesmoke;
-}
-.container {
-    
-    padding: 0;
-    margin: 0;
-}
-.info {
-    padding: 10px;
-    width: 25vw;
 }
 
-.box {
-    margin: 10px;
+h1 {
+    font-family:Arial;
+    font-size: 4rem;
 }
 
-.box-map {
-    width: 90%;
+h2 {
+    font-family:Arial;
+    font-size: 2rem;
+}
+
+p {
+    font-family: Georgia;
+    font-size: 1.5rem;
+}
+
+nav {
+    background-color: white;
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin: 2%;
+}
+
+article {
+    width: 80%;
     float: left;
 }
 
@@ -46,41 +51,14 @@ body {
 }
 
 .grafico1 {
-    background-color: rgba(0,0,0, 0.3);
+    background-color: transparent;
     width: 50vw;
-    height: 70vh;
-    visibility: collapse;
-    opacity: 0;
-    border-radius: 10px;
-    
-}
-
-.grafico1 img{
-    display: block;
-    margin-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 75%;
-    max-height: 70%;
-}
-.grafico2 {
-    background-color: rgba(0,0,0, 0.3);
-    width: 35vw;
-    height: 80vh;
-    right: 5%;
+    height: fit-content;
+    visibility: visible;
     opacity: 1;
-    border-radius: 10px;
+    text-align: center;
 }
 
-.title {
-    padding: 10px;
-    text-align: center;
-    max-height: 20%;
-}
-.grafico2 li {
-    font-size: 22px;
-    padding-top: 25px;
-}
 .vertical-center {
     margin: 0;
     position: absolute;
@@ -92,158 +70,17 @@ body {
 .center {
     margin: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 55%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
-.animar-mapa {
-    animation-name: ani-mapa;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+.center-mapa {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-
-.animar-mapa-vuelta {
-    animation-name: ani-mapa-vuelta;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-.animar-grafico1 {
-    animation-name: ani-grafico1;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-.animar-grafico1-vuelta {
-    animation-name: ani-grafico1-vuelta;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-.animar-grafico2 {
-    animation-name: ani-grafico2;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-.animar-grafico2-vuelta {
-    animation-name: ani-grafico2-vuelta;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes ani-mapa {
-    0% {
-        left: 50%;
-    }
-    100%{
-        left: 90%;
-    }
-}
-
-@keyframes ani-mapa-vuelta {
-    0% {
-        left: 90%;
-    }
-    100%{
-        left: 50%;
-    }
-}
-
-@keyframes ani-grafico1 {
-    50% {
-        left: 50%;
-        opacity: 0;
-        visibility: visible;
-    }
-    100%{
-        left: 55%;
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
-@keyframes ani-grafico1-vuelta {
-    0% {
-        left: 55%;
-        opacity: 1;
-        visibility: visible;
-    }
-    20%{
-        left: 50%;
-        opacity: 0;
-        visibility: collapse;
-    }
-}
-
-@keyframes ani-grafico2 {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-    10%{
-        opacity: 0;
-        visibility: collapse;
-    }
-    100% {
-        opacity: 0;
-        visibility: collapse;
-    }
-}
-
-@keyframes ani-grafico2-vuelta {
-    0% {
-        opacity: 0;
-        visibility: collapse;
-    }
-    70% {
-        opacity: 0;
-        visibility: visible;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        
-    }
-}
-
-/*
-@media (max-width: 800px) {
-    .info, .box-map {
-      width: 100%;
-      height: auto;
-    }
-
-    .center {
-        transform: translate(-85%, -50%);        
-    }
-
-    .mapa {
-        max-height: 70vh;
-        max-width: 20vw;
-    }
-
-    .grafico1 {
-        background-color: tomato;
-        width: 60vw;
-        height: 40vh;
-    }
-
-    #grafico1 {
-        left: 10%;
-    }
-  } */
