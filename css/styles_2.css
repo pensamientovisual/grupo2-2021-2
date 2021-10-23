@@ -110,24 +110,38 @@ article {
     text-align: center;
     display: block;
 }
+.box1-container {
+    background-color: cornflowerblue;
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    display: block;
+}
 
 .box{
     display: inline-block;
     padding: 20px;
     margin: 20px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: whitesmoke;
+    color: rgb(172, 166, 166);
     border-radius: 20px;
     width: 20vw;
     height: 65vh;
 }
-
-.btm{
+.container-btm{
+    padding: 1%;
+}
+button {
+    display: block;
     background-color:grey;
     color: whitesmoke;
-    border-radius: 10px; 
+    border-radius: 10px;
+    height: 7vh;
+    width:  20vw; 
+    font-size: 16px;
     text-align: center;
     padding: 2%;
+    margin: 4%;
 }
 a {
     text-decoration: none;
