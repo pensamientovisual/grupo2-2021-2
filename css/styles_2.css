@@ -1,32 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
+* { 
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    }
+
+body {
     font-family: 'Roboto', sans-serif;
-
 }
 
-.section {
+section {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 1vh 1vw;
+}
+nav {
+    float: left;
+    width: 20%;
+}
+
+article {
+    float: left;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+.centrar {
+    width: max-content; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
     display: flex;
-    margin: 0;
-    background-image: url('/img/file_20191007175043.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    
-}
-.container {
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: whitesmoke;
-    min-height: 100vh;
-    min-width: 100vh;
 }
 
 h1 {
@@ -42,21 +54,15 @@ p {
     font-size: 1.5rem;
 }
 
-.nav {
-    float: left;
-    width: 20%;
-    height: 100%;
-    margin: 2%;
+a {
+    text-decoration: none;
 }
 
-article {
-    width: 80%;
-    float: left;
-}
 
 .mapa {
+    float: left;
     max-height: 90vh;
-    max-width: 20vw;
+    width: 20vw;
 }
 
 .mapa path {
@@ -70,79 +76,71 @@ article {
 }
 
 .grafico1 {
+    float: left;
     width: 50vw;
     height: fit-content;
-    visibility: visible;
-    opacity: 1;
     text-align: center;
+    margin: auto;
 }
 
-.vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
 
-.center {
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 55%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.center-mapa {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 90%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.box-container {
+.seccion1 {
     background-color: grey;
-    margin: 0;
-    padding: 50px;
-    text-align: center;
-    display: block;
-}
-.box1-container {
-    background-color: cornflowerblue;
-    margin: 0;
-    padding: 50px;
-    text-align: center;
-    display: block;
 }
 
-.box{
-    display: inline-block;
-    padding: 20px;
-    margin: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(172, 166, 166);
-    border-radius: 20px;
-    width: 20vw;
-    height: 65vh;
+.seccion2 {
+    background-color: cornflowerblue;
 }
-.container-btm{
-    padding: 1%;
+
+.seccion3 {
+    background-color: grey;
 }
+
+.articulo1 {
+    padding: 3vh 0;
+}
+
+
 button {
     display: block;
     background-color:grey;
     color: whitesmoke;
     border-radius: 10px;
     height: 7vh;
-    width:  20vw; 
+    width:  10vw;
     font-size: 16px;
     text-align: center;
     padding: 2%;
     margin: 4%;
 }
-a {
-    text-decoration: none;
+
+.navegacion {
+    margin: 0;
+    position: fixed;
+    bottom: 2.5vh;
+    left: 2.5vh;
 }
+
+.cajas {
+    height: 84vh;
+    display: flex;
+}
+
+.box{
+    float: left;
+    padding: 2vw;
+    margin: auto 1vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(172, 166, 166);
+    border-radius: 20px;
+    width: 25vw;
+    height: 70vh;
+    
+}
+
+.box p {
+    font-size: 1.25rem;
+}
+
+
+
