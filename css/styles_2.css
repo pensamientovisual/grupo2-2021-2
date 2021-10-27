@@ -171,6 +171,8 @@ a {
 }
 
 .box{
+    display: flex;
+    flex-direction: column;
     float: left;
     padding: 2vw;
     margin: auto 1vw;
@@ -188,3 +190,11 @@ a {
 
 
 
+.counter {
+    display: block;
+    font-size: 24px;
+    color: #f2f2f2;
+    padding: 10px;
+    font-weight: 600;
+    width: 50px;
+  }

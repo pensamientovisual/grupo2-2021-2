@@ -35,7 +35,25 @@ let datasequia = {
   'CL-NU': [-0.7, 0.7, 1.7, 1.0, 0.0, -0.3, -1.1, 1.1, -2.2, 0.2, 0.4, -0.8, 0.9, -1.1, -0.1, 0.7, 0.9, -1.4, 0.0, -0.3, -1.3, -0.3, -0.3, -1.2, -0.1, 0.0, -2.0, -0.3, -0.8, -1.4, -1.6]
 }
 
+const counters = document.querySelectorAll("span"); // Problema -> Vacio
+console.log(counters);
+const speed = 200;
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
 
+    const inc = target / speed;
+
+    if (count < target) {
+      count.innerText = count + inc;
+      setTimeout(updateCount, 1)
+    } else {
+      count.innerText = target;
+    }
+  }
+  updateCount();
+});
 
 
 var data = {
@@ -224,5 +242,4 @@ window.onload = function () {
 
 
 }
-
 
