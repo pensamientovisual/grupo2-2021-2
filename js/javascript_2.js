@@ -35,27 +35,6 @@ let datasequia = {
   'CL-NU': [-0.7, 0.7, 1.7, 1.0, 0.0, -0.3, -1.1, 1.1, -2.2, 0.2, 0.4, -0.8, 0.9, -1.1, -0.1, 0.7, 0.9, -1.4, 0.0, -0.3, -1.3, -0.3, -0.3, -1.2, -0.1, 0.0, -2.0, -0.3, -0.8, -1.4, -1.6]
 }
 
-const counters = document.querySelectorAll("span"); // Problema -> Vacio
-console.log(counters);
-const speed = 200;
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-
-    const inc = target / speed;
-
-    if (count < target) {
-      count.innerText = count + inc;
-      setTimeout(updateCount, 1)
-    } else {
-      count.innerText = target;
-    }
-  }
-  updateCount();
-});
-
-
 var data = {
   labels: eje.slice(15),
   datasets: []
@@ -75,7 +54,6 @@ const config = {
         type: 'linear',
         display: true,
         position: 'right',
-        text: 'hola',
       }
     }
   },
@@ -104,19 +82,6 @@ function actualizar(datalist) {
   }
 }
 
-function actualizar_precipitacion(datalist) {
-  data.datasets = []
-  for (i = 0; i < datalist.length; i++) {
-    var newdataset = {
-      label: datalist[i].getAttribute('title'),
-      borderColor: "#006D94",
-      data: dataprecipitacion[datalist[i].getAttribute('id')],
-      yAxisID: 'y1',
-    }
-    data.datasets.push(newdataset)
-  }
-}
-
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -130,9 +95,6 @@ async function reg(regio, myChart) {
     myChart.update()
     await sleep(100);
     regio[j[s]].style.fill = "";
-
-
-
   }
 }
 
@@ -143,7 +105,6 @@ async function coun(objs) {
   var speed = 10;
   var target = parseFloat(objs.getAttribute('data-target'));
   var inc = target / speed;
-  console.log(inc)
   while (true){ 
     let count = parseFloat(objs.innerText);
     if (count < target) {
@@ -154,7 +115,7 @@ async function coun(objs) {
       objs.innerText = target;
       break;
     }
-  
+
     await sleep(100)
 
   }
@@ -172,30 +133,9 @@ window.onload = function () {
 
   var region_mostradas = null
   var regiones = document.getElementById('mapa').childNodes;
-  //reg(regiones, myChart);
-
   regiones.forEach(item => {
     item.onclick = function (event) {
       console.log(item.getAttribute('id'))
-
-      /*
-
-      let d = true
-      for (i = 0; i < regiones_mostradas.length; i++) {
-        if (item.getAttribute('id') == regiones_mostradas[i].getAttribute('id')) {
-          d = false
-        }
-      }
-      if (d) {
-        regiones_mostradas.push(item)
-        item.style.fill = "green";
-      }
-      else {
-        regiones_mostradas = regiones_mostradas.filter(fruit => fruit !== item);
-      
-        item.style.fill = ""; 
-        
-      }*/
 
       if (region_mostradas) {
         region_mostradas.style.fill = "";
@@ -205,28 +145,13 @@ window.onload = function () {
       actualizar([region_mostradas])
       item.style.fill = "green";
       myChart.update()
-
-
-
-
-
-
-
-      /*
-      limpiar_regiones(regiones)
-      item.style.fill = "green";
-      grafico1.children[0].innerHTML = item.getAttribute('title')
-      grafico1.children[1].setAttribute('src', name1+item.getAttribute('title')+'.png')
-*/
     }
   });
 
-  const counters = document.querySelectorAll(".counter"); // Problema -> Vacio
-  
+  const counters = document.querySelectorAll(".counter");
   console.log(counters);
   counters.forEach(counter => {
     coun(counter);
-    
   });
 
 
