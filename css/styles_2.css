@@ -21,9 +21,23 @@ section {
     padding: 1vh 1vw;
 }
 nav {
+    position: relative;
     float: left;
     width: 20%;
+    padding: 2vw 2vh;
+    background-color: white;
+    border-radius: 2.5%;
 }
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: 0.75;
+    box-sizing: border-box; 
+  }
 
 article {
     float: left;
@@ -33,7 +47,7 @@ article {
 }
 
 .centrar {
-    width: max-content; /* Can be in percentage also. */
+    width: fit-content; /* Can be in percentage also. */
     height: auto;
     margin: 0 auto;
     padding: 0;
@@ -43,15 +57,15 @@ article {
 
 h1 {
     margin: 0;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 a {
@@ -61,17 +75,18 @@ a {
 
 .mapa {
     float: left;
-    max-height: 90vh;
-    width: 20vw;
+    height: 90vh;
+    max-width: 20vw;
+    margin: auto 0 auto 5vw;
 }
 
 .mapa path {
-    fill: red;
+    fill: #E0831F;
     stroke: black;
 }
 
 .mapa path:hover {
-    fill: lime;
+    fill: #94510A;
     stroke: black;
 }
 
@@ -81,37 +96,66 @@ a {
     height: fit-content;
     text-align: center;
     margin: auto;
+    padding: 2vw 2vh;
+    background-color: white;
+    border-radius: 2.5%;
 }
 
-
 .seccion1 {
-    background-color: grey;
+    background-color: #FFFFFF;
 }
 
 .seccion2 {
-    background-color: cornflowerblue;
+    background-color: #e0831f;
 }
 
 .seccion3 {
-    background-color: grey;
+    background-color: #FFFFFF;
 }
 
 .articulo1 {
-    padding: 3vh 0;
+    padding: 4vh 0;
 }
 
 
-button {
+.navegacion button {
     display: block;
-    background-color:grey;
-    color: whitesmoke;
     border-radius: 10px;
-    height: 7vh;
-    width:  10vw;
-    font-size: 16px;
-    text-align: center;
-    padding: 2%;
+    position: relative;
+    background-color: #1FADE0;
+    border: none;
+    font-size: 1rem;
+    color: black;
+    padding: auto;
     margin: 4%;
+    width: 10vw;
+    height: 7vh;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.navegacion button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.navegacion button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }
 
 .navegacion {
