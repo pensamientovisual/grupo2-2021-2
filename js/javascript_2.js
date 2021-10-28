@@ -195,6 +195,7 @@ window.onload = function () {
   actualizar(region_mostrada, consumo)
   regiones[13].style.fill = "green";
   myChart.update();
+  console.log('hola')
 
   botonindicadores.onclick = function (event) {
     counters.forEach(counter => {
