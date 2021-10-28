@@ -147,7 +147,7 @@ async function reg(regio, myChart) {
 async function coun(objs) {
 
   objs.innerText = 0;
-  var speed = 10;
+  var speed = 40;
   var target = parseFloat(objs.getAttribute('data-target'));
   var inc = target / speed;
   while (true) {

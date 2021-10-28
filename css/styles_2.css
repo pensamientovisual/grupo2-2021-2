@@ -179,8 +179,8 @@ a {
     background-color:white;
     color: black;
     border-radius: 20px;
-    width: 25vw;
-    height: 70vh;
+    width: 27vw;
+    height: 75vh;
     
 }
 
@@ -191,11 +191,12 @@ a {
 
 
 .counter {
-    display: block;
+    display: inline;
     font-size: 24px;
     color: black;
     font-weight: 600;
     width: 50px;
+    padding-left: 25px;
   }
 
 .barra-grafico button, h2 {
@@ -226,4 +227,7 @@ a {
       background-color: white;
       border-radius: 5%;
       width: fit-content;
+  }
+  h2, p, ul {
+      padding: 5% 0;
   }
