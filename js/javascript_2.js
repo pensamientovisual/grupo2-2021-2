@@ -74,7 +74,8 @@ const config = {
         display: true,
         position: 'right',
       }
-    },
+    
+  }
   },
 };
 
@@ -85,14 +86,14 @@ function actualizar(dataitem, consumo) {
 
   if (consumo) {
     var newdataset = {
-      label: "Consumo",
+      label: "Consumo (m3)      ",
       borderColor: "#1FE09B",
       data: dataconsumo[dataitem.getAttribute('id')],
       yAxisID: 'y'
     }
     data.datasets.push(newdataset)
     var newdataset = {
-      label: "Precipitaciones",
+      label: "Precipitaciones (mm)",
       borderColor: "#006D94",
       backgroundColor: "#006D94",
       data: dataprecipitacion[dataitem.getAttribute('id')].slice(22),
@@ -104,14 +105,14 @@ function actualizar(dataitem, consumo) {
   }
   else {
     var newdataset = {
-      label: "Sequía",
+      label: "Sequía (SPI)      ",
       borderColor: "#94510A",
       data: datasequia[dataitem.getAttribute('id')].slice(22),
       yAxisID: 'y'
     }
     data.datasets.push(newdataset)
     var newdataset = {
-      label: "Precipitaciones",
+      label: "Precipitaciones (mm)",
       borderColor: "#006D94",
       backgroundColor: "#006D94",
       data: dataprecipitacion[dataitem.getAttribute('id')].slice(22),
@@ -173,8 +174,13 @@ window.onload = function () {
   var botonsequia = document.getElementById('btnsequia');
   var botonconsumo = document.getElementById('btnconsumo');
 
-  var consumo = false
-  botonsequia.classList.add('disabled')
+  var consumo = true
+  if (consumo){
+    botonconsumo.classList.add('disabled')
+  }else{
+    botonsequia.classList.add('disabled')
+  }
+  
 
 
   var region_mostrada = null
