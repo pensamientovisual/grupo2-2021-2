@@ -23,7 +23,7 @@ section {
 nav {
     position: relative;
     float: left;
-    width: 20%;
+    width: 30%;
     padding: 2vw 2vh;
     background-color: white;
     border-radius: 2.5%;
@@ -41,7 +41,7 @@ nav {
 
 article {
     float: left;
-    width: 80%;
+    width: 70%;
     padding: 0;
     margin: 0;
 }
@@ -191,7 +191,7 @@ a {
 
 
 .counter {
-    display: inline;
+    display: block;
     font-size: 24px;
     color: black;
     font-weight: 600;
@@ -201,7 +201,7 @@ a {
 
 .barra-grafico button, h2 {
       float: left;
-      margin: 0 2.5vw;
+      margin: 0 1vw;
   }
 
   .button {
@@ -229,5 +229,9 @@ a {
       width: fit-content;
   }
   h2, p, ul {
-      padding: 5% 0;
+      padding: 1% 0;
+  }
+
+  .seccion1 .text {
+    font-size: .9rem;
   }
