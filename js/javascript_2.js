@@ -78,14 +78,16 @@ const config = {
   },
 };
 
-
-function actualizar(datalist) {
+function actualizar(dataitem, consumo) {
+  var regionselec = document.getElementById('regionseleccionada');
+  regionselec.innerText = dataitem.getAttribute('title');
   data.datasets = []
-  for (i = 0; i < datalist.length; i++) {
+
+  if (consumo) {
     var newdataset = {
-      label: "Sequía",
-      borderColor: "#94510A",
-      data: datasequia[datalist[i].getAttribute('id')].slice(15),
+      label: "Consumo",
+      borderColor: "#1FE09B",
+      data: dataconsumo[dataitem.getAttribute('id')],
       yAxisID: 'y'
     }
     data.datasets.push(newdataset)
@@ -93,11 +95,31 @@ function actualizar(datalist) {
       label: "Precipitaciones",
       borderColor: "#006D94",
       backgroundColor: "#006D94",
-      data: dataprecipitacion[datalist[i].getAttribute('id')].slice(15),
+      data: dataprecipitacion[dataitem.getAttribute('id')].slice(22),
       yAxisID: 'y1',
       type: 'bar'
     }
     data.datasets.push(newdataset)
+    data.labels = eje.slice(22)
+  }
+  else {
+    var newdataset = {
+      label: "Sequía",
+      borderColor: "#94510A",
+      data: datasequia[dataitem.getAttribute('id')].slice(22),
+      yAxisID: 'y'
+    }
+    data.datasets.push(newdataset)
+    var newdataset = {
+      label: "Precipitaciones",
+      borderColor: "#006D94",
+      backgroundColor: "#006D94",
+      data: dataprecipitacion[dataitem.getAttribute('id')].slice(22),
+      yAxisID: 'y1',
+      type: 'bar'
+    }
+    data.datasets.push(newdataset)
+    data.labels = eje.slice(22)
   }
 }
 
@@ -116,7 +138,6 @@ async function reg(regio, myChart) {
     regio[j[s]].style.fill = "";
   }
 }
-
 
 async function coun(objs) {
 
@@ -139,33 +160,68 @@ async function coun(objs) {
 
 }
 
-
 window.onload = function () {
   var myChart = new Chart(
     document.getElementById('myChart'),
     config
   );
-  
-
-  
 
 
-  var region_mostradas = null
   var regiones = document.getElementById('mapa').childNodes;
+  var botonindicadores = document.getElementById('indicadores');
+
+  var botonsequia = document.getElementById('btnsequia');
+  var botonconsumo = document.getElementById('btnconsumo');
+
+  var consumo = false
+  botonsequia.classList.add('disabled')
+
+
+  var region_mostrada = null
   regiones.forEach(item => {
     item.onclick = function (event) {
       console.log(item.getAttribute('id'))
-
-      if (region_mostradas) {
-        region_mostradas.style.fill = "";
+      if (region_mostrada) {
+        region_mostrada.style.fill = "";
       }
-
-      region_mostradas = item
-      actualizar([region_mostradas])
+      region_mostrada = item
+      actualizar(region_mostrada, consumo)
       item.style.fill = "green";
       myChart.update()
     }
   });
+
+  botonindicadores.onclick = function (event) {
+    counters.forEach(counter => {
+      coun(counter);
+
+    });
+  }
+
+
+  botonsequia.onclick = function (event) {
+    consumo = false
+    actualizar(region_mostrada, consumo);
+    myChart.update();
+    botonsequia.classList.add('disabled')
+    botonconsumo.classList.remove('disabled')
+  }
+
+  botonconsumo.onclick = function (event) {
+    consumo = true
+    actualizar(region_mostrada, consumo);
+    myChart.update();
+    botonconsumo.classList.add('disabled')
+    botonsequia.classList.remove('disabled')
+  }
+
+
+
+
+
+
+
+
 
   const counters = document.querySelectorAll(".counter");
   console.log(counters);
@@ -174,13 +230,7 @@ window.onload = function () {
   });
 
 
-  var botonindicadores = document.getElementById('indicadores');
-  botonindicadores.onclick = function (event) {
-    counters.forEach(counter => {
-      coun(counter);
 
-    });
-  }
 
 
 

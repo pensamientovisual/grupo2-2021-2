@@ -198,3 +198,27 @@ a {
     font-weight: 600;
     width: 50px;
   }
+
+.barra-grafico button, h2 {
+      float: left;
+      margin: 0 2.5vw;
+  }
+
+  .button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 1vh 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  
